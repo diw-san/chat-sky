@@ -113,9 +113,9 @@ export default function ChatRoom() {
   }
 
   return (
-    <>
+    <div className="h-screen flex flex-col justify-center">
       <div
-        className="fixed min-w-[350px] max-w-[740px] h-[720px] my-2 inset-x-1 mx-auto border-[3px] p-1 rounded-md"
+        className="fixed min-w-[350px] max-w-[920px] min-h-[580px] max-h-[1320px] h-lvh my-2 inset-x-1 mx-auto border-[4px] p-1 rounded-md"
         style={{ borderColor: borderClr() }}
       >
         <img
@@ -130,8 +130,8 @@ export default function ChatRoom() {
           </div>
         )}
 
-        <div className="relative h-full">
-          <div className=" overflow-scroll scroll-smooths hideScroll h-full">
+        <div className="relative min-h-[580px] max-h-[1320px] h-full">
+          <div className=" h-full">
             <div className="absolute flex justify-between items-center p-1 w-full rounded-md border bg-gray-800 border-gray-600 h-11 z-50">
               <div className="flex ml-2 items-center font-bold text-[14px] gap-3">
                 <img
@@ -149,7 +149,7 @@ export default function ChatRoom() {
                 Log out
               </button>
             </div>
-            <div className="mt-12 mb-[50px] px-2">
+            <div className=" overflow-scroll scroll-smooths hideScroll min-h-[550px] max-h-[1300px] h-[98lvh] pt-8 pb-12 px-2">
               {messages.map((msg, i) => (
                 <div key={msg.id} className="mt-4">
                   {getDate(i) && (
@@ -226,6 +226,6 @@ export default function ChatRoom() {
           </form>
         </div>
       </div>
-    </>
+    </div>
   );
 }

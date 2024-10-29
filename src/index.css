@@ -2,21 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-.hideScroll::-webkit-scrollbar{
+.hideScroll::-webkit-scrollbar {
   display: none;
 }
 
-.title{
+.title {
   animation-duration: 1.4s;
   animation-name: titleZoom;
   animation-iteration-count: 100;
-   
 }
 
-@keyframes titleZoom{
- 50%{
-  transform:scale(1.1) ;
- }
+@keyframes titleZoom {
+  50% {
+    transform: scale(1.1);
+  }
 }
 
 :root {
@@ -33,4 +32,3 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
